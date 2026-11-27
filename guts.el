@@ -232,3 +232,7 @@ With an active region, restrict the search to that region."
                (local (guts--buffer-definitions)))
     (with-output-to-temp-buffer "*guts sexp analysis*"
       (princ (guts--format-report globals customs calls local)))))
+
+(provide 'guts)
+
+;;; guts.el ends here
