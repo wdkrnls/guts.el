@@ -1,4 +1,23 @@
-;; -*- lexical-binding: t; -*-
+;;; guts.el --- Expression anatomy for Emacs Lisp  -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2026 Your Name
+
+;; Author: Kyle Andrews <kyle.c.andrews@gmail.com>
+;; Maintainer: Kyle Andrews <kyle.c.andrews@gmail.com>
+;; Version: 0.1.0
+;; Package-Requires: ((emacs "27.1"))
+;; Keywords: lisp, tools, convenience
+;; URL: https://github.com/wdkrnls/guts.el
+
+;; This file is not part of GNU Emacs.
+
+;;; Commentary:
+
+;; Walk the expression at point and report the symbols it uses, sorted
+;; into reader syntax, special forms, macros, functions, variables and
+;; custom variables.  See the README for details.
+
+;;; Code:
 
 (defvar guts--reader-symbols '(\` \, \,@)
   "Symbols introduced by reader syntax rather than by real calls.
